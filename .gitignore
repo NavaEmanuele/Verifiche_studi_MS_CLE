@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+
+# Ambienti locali
+.venv/
+venv/
+.qodo/
+
+# Dati e output locali (NON versionare)
+data/**
+reports/**
+_validation/**
+tmp/**
+!data/.gitkeep
+!reports/.gitkeep
+
+# File GIS temporanei/lock
+*.lock
+*.sr.lock
+
+# Editor
+.vscode/
+.idea/

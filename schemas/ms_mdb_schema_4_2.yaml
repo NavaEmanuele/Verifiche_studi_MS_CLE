@@ -1,0 +1,46 @@
+strict_mode: true
+tables:
+
+  Sito_Puntuale:
+    required: true
+    fields:
+      - {name: ID_SPU,   type: string, required: true, unique: true, max_length: 40}
+      - {name: Coord_X,  type: float,  required: true}
+      - {name: Coord_Y,  type: float,  required: true}
+      - {name: tipo_coor, type: string, required: false, enum_from: decodifiche_varie.tipo_coor}
+      - {name: tipo_quota,type: string, required: false, enum_from: decodifiche_varie.tipo_quota}
+
+  Sito_Lineare:
+    required: false
+    fields:
+      - {name: ID_SLN,   type: string, required: true, unique: true, max_length: 40}
+
+  Indagini_Puntuali:
+    required: false
+    fields:
+      - {name: ID_IP,    type: string, required: true, unique: true, max_length: 40}
+      - {name: ID_SPU,   type: string, required: true, max_length: 40}
+      - {name: Tipo_ind, type: string, required: true, enum_from: decodifiche_varie.tipo_indagine}
+      - {name: Quota_rif,type: float,  required: false}
+
+  Indagini_Lineari:
+    required: false
+    fields:
+      - {name: ID_IL,    type: string, required: true, unique: true, max_length: 40}
+      - {name: ID_SLN,   type: string, required: true, max_length: 40}
+      - {name: Tipo_ind, type: string, required: true, enum_from: decodifiche_varie.tipo_indagine}
+
+  Parametri_Puntuali:
+    required: false
+    fields:
+      - {name: ID_IP,     type: string, required: true, max_length: 40}
+      - {name: Cod_Param, type: string, required: true, enum_from: decodifiche_varie.parametri}
+      - {name: Valore,    type: float,  required: true}
+
+  Parametri_Lineari:
+    required: false
+    fields:
+      - {name: ID_IL,     type: string, required: true, max_length: 40}
+      - {name: Cod_Param, type: string, required: true, enum_from: decodifiche_varie.parametri}
+      - {name: Valore,    type: float,  required: true}
+

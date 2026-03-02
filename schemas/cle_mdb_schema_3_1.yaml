@@ -1,0 +1,45 @@
+strict_mode: true
+tables:
+
+  scheda_US:
+    required: true
+    fields:
+      - {name: ID_US,    type: string, required: true, unique: true, min_length: 1, max_length: 64}
+      - {name: ID_AS,    type: string, required: false, max_length: 64}
+      - {name: cod_prov, type: string, required: false, regex: "^[0-9]{3}$"}
+      - {name: cod_com,  type: string, required: false, regex: "^[0-9]{3}$"}
+
+  scheda_AS:
+    required: false
+    fields:
+      - {name: ID_AS,    type: string, required: true, unique: true, min_length: 1, max_length: 64}
+      - {name: cod_prov, type: string, required: false, regex: "^[0-9]{3}$"}
+      - {name: cod_com,  type: string, required: false, regex: "^[0-9]{3}$"}
+
+  scheda_AE:
+    required: false
+    fields:
+      - {name: ID_AE,    type: string, required: true, unique: true, min_length: 1, max_length: 64}
+
+  scheda_AC:
+    required: false
+    fields:
+      - {name: ID_AC,    type: string, required: true, unique: true, min_length: 1, max_length: 64}
+
+  scheda_ES:
+    required: false
+    fields:
+      - {name: ID_ES,    type: string, required: true, unique: true, min_length: 1, max_length: 64}
+
+  Indice:
+    required: false
+    fields:
+      - {name: ID, type: string, required: false}
+
+  Decodifiche01:
+    required: false
+    fields: []
+
+  Decodifiche02:
+    required: false
+    fields: []

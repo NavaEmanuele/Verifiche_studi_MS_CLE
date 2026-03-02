@@ -1,0 +1,147 @@
+tipo_el:
+  5001: Faglia attiva e capace, cinematismo non definito (certa)
+  5002: Faglia attiva e capace, cinematismo non definito (incerta)
+  5011: Faglia attiva e capace, diretta (certa)
+  5012: Faglia attiva e capace, diretta (incerta)
+  5021: Faglia attiva e capace, inversa (certa)
+  5022: Faglia attiva e capace, inversa (incerta)
+  5031: Faglia attiva e capace, trascorrente/obliqua (certa)
+  5032: Faglia attiva e capace, trascorrente/obliqua (incerta)
+  5111: Faglia potenzialmente attiva e capace, diretta (certa)
+  5112: Faglia potenzialmente attiva e capace, diretta (incerta)
+  5121: Faglia potenzialmente attiva e capace, inversa (certa)
+  5122: Faglia potenzialmente attiva e capace, inversa (incerta)
+  5131: Faglia potenzialmente attiva e capace, trascorrente/obliqua (certa)
+  5132: Faglia potenzialmente attiva e capace, trascorrente/obliqua (incerta)
+  5141: Faglia potenzialmente attiva e capace, cinematismo non definito (certa)
+  5142: Faglia potenzialmente attiva e capace, cinematismo non definito (incerta)
+  7011: Faglia non attiva, diretta (certa)
+  7012: Faglia non attiva, diretta (incerta)
+  7021: Faglia non attiva, inversa (certa)
+  7022: Faglia non attiva, inversa (incerta)
+  7031: Faglia non attiva, trascorrente/obliqua (certa)
+  7032: Faglia non attiva, trascorrente/obliqua (incerta)
+  7051: Faglia non attiva, cinematismo non definito (certa)
+  7052: Faglia non attiva, cinematismo non definito (incerta)
+  5041: Orlo di scarpata morfologica naturale o artificiale (10-20m)
+  5042: Orlo di scarpata morfologica naturale o artificiale (>20m)
+  5051: Orlo di terrazzo fluviale (10-20m)
+  5052: Orlo di terrazzo fluviale (>20m)
+  5060: Cresta
+  5070: Scarpata sepolta
+  5071: Limite di versante sepolto con inclinazione compresa tra 15° e 45°
+  5081: Asse di valle sepolta stretta (C≥0.25)
+  5082: Asse di valle sepolta larga (C<0.25)
+  5301: Asse di paleoalveo
+  5201: Limite di campo lavico (ambiente vulcanico)
+  7041: Sinclinale
+  7042: Anticlinale
+  8001: Traccia della sezione geologico-tecnica rappresentativa
+  8002: Traccia della sezione topografica
+tipo_ep:
+  6010: Picco isolato
+  6020: Cavità sepolta isolata / sinkhole / dolina
+tipo_f:
+  4010: Conoide alluvionale
+  4020: Falda detritica
+  4030: Area con cavità sepolte
+  4040: Ventaglio di lava al piede di pendii o scarpate sepolte
+  4050: Superficie suborizzontale sepolta
+  4060: Cono o edificio vulcanoclastico sepolto
+  4070: Depositi incoerenti sepolti
+  4080: Campo di fratturazione cosismica
+tipo_gi:
+  '11': Giacitura strati
+  '21': Pozzo/sondaggio che ha raggiunto il substrato geologico
+  '22': Pozzo/sondaggio che non ha raggiunto il substrato geologico
+  '31': Presenza della falda in aree con sabbie e/o ghiaie
+tipo_z:
+  1011: Substrato lapideo stratificato
+  1012: Substrato lapideo non stratificato
+  1021: Granulare cementato stratificato
+  1022: Granulare cementato non stratificato
+  1031: Coesivo sovraconsolidato stratificato
+  1032: Coesivo sovraconsolidato non stratificato
+  1041: Alternanze litologiche stratificato
+  1042: Alternanze litologiche non stratificato
+  2099: Substrato fratturato o alterato (riservato)
+tipo_i_famiglie:
+- 300120xy
+- 300220xy
+- 301120xy
+- 301220xy
+- 301320xy
+- 301420xy
+- 301520xy
+- 302120xy
+- 302220xy
+- 302320xy
+- 302420xy
+- 302520xy
+- 303120xy
+- 303220xy
+- 303320xy
+- 303420xy
+- 303520xy
+- 304120xy
+- 304220xy
+- 304320xy
+- 304420xy
+- 304520xy
+- 305020xy
+- 305220xy
+- 305320xy
+- '3060'
+- '3061'
+- '3062'
+- '3070'
+- '3080'
+decodifiche_varie:
+  mod_identcoord:
+  - CTR005
+  - CTR010
+  - IGM025
+  - IGM050
+  - IGM100
+  - ALTCAR
+  - GPS
+  - ALTRO
+  - ALTIM
+  - DTM
+  modo_quota:
+  - CTR005
+  - CTR010
+  - IGM025
+  - IGM050
+  - IGM100
+  - ALTCAR
+  - GPS
+  - ALTIM
+  - DTM
+  - ALTRO
+  attend_mis:
+  - 1
+  - 2
+  - 3
+geotec_stato:
+  11: Addensato
+  12: Moderatamente addensato
+  13: Poco addensato
+  14: Sciolto
+  21: Coesivo estremamente consistente
+  22: Coesivo molto consistente
+  23: Coesivo consistente
+  24: Coesivo moderatamente consistente
+  25: Coesivo poco consistente
+  26: Coesivo privo di consistenza
+geotec_tipo_gt:
+  RI: Terreni contenenti resti di attività antropica
+  GW: Ghiaie ben assortite / ghiaie-sabbie
+  GP: Ghiaie poco assortite
+  GM: Ghiaie limose
+  GC: Ghiaie argillose
+  SW: Sabbie ben assortite / sabbie ghiaiose
+  SP: Sabbie poco assortite
+  SM: Sabbie limose
+  SC: Sabbie argillose
+  OL: Limi organici/argille limose organiche (bassa plast.)

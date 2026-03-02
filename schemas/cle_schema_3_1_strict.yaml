@@ -1,0 +1,47 @@
+strict_mode: true
+shapefiles:
+
+  CL_ES:
+    description: "CLE v3.1 - Elementi strutturali"
+    required: false
+    geometry: [Point, Polygon, MultiPolygon]
+    fields:
+      - {name: ID_ES,   type: string, required: true, unique: true}
+      # opzionali (se presenti): codici ISTAT 3+3
+      - {name: cod_prov, type: string, required: false, regex: '^\d{3}$'}
+      - {name: cod_com,  type: string, required: false, regex: '^\d{3}$'}
+
+  CL_AE:
+    description: "CLE v3.1 - Aree edificate"
+    required: false
+    geometry: [Polygon, MultiPolygon]
+    fields:
+      - {name: ID_AE,   type: string, required: true, unique: true}
+      - {name: cod_prov, type: string, required: false, regex: '^\d{3}$'}
+      - {name: cod_com,  type: string, required: false, regex: '^\d{3}$'}
+
+  CL_AC:
+    description: "CLE v3.1 - Componenti/Connessioni"
+    required: false
+    geometry: [LineString, MultiLineString, Polygon, MultiPolygon]
+    fields:
+      - {name: ID_AC,   type: string, required: true, unique: true}
+
+  CL_AS:
+    description: "CLE v3.1 - Aggregati strutturali"
+    required: false
+    geometry: [Polygon, MultiPolygon]
+    fields:
+      - {name: ID_AS,   type: string, required: true, unique: true}
+      - {name: cod_prov, type: string, required: false, regex: '^\d{3}$'}
+      - {name: cod_com,  type: string, required: false, regex: '^\d{3}$'}
+
+  CL_US:
+    description: "CLE v3.1 - Unità strutturali"
+    required: false
+    geometry: [Polygon, MultiPolygon]
+    fields:
+      - {name: ID_US,   type: string, required: true, unique: true}
+      - {name: cod_prov, type: string, required: false, regex: '^\d{3}$'}
+      - {name: cod_com,  type: string, required: false, regex: '^\d{3}$'}
+

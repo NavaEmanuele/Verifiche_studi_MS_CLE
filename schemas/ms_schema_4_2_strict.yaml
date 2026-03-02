@@ -1,0 +1,109 @@
+strict_mode: true
+shapefiles:
+
+  Elineari:
+    description: "Elementi lineari (MS 4.2 §2.2.1)"
+    required: false
+    geometry: [LineString, MultiLineString]
+    fields:
+      - {name: ID_el,  type: integer, required: true, unique: true}
+      - {name: Tipo_el, type: integer, required: true, enum_from: tipo_el}
+
+  Epuntuali:
+    description: "Elementi puntuali (MS 4.2 §2.2.2)"
+    required: false
+    geometry: [Point]
+    fields:
+      - {name: ID_ep,  type: integer, required: true, unique: true}
+      - {name: Tipo_ep, type: integer, required: true, enum_from: tipo_ep}
+
+  Forme:
+    description: "Forme (MS 4.2 §2.2.3)"
+    required: false
+    geometry: [Polygon, MultiPolygon]
+    fields:
+      - {name: ID_f,   type: integer, required: true, unique: true}
+      - {name: Tipo_f, type: integer, required: true, enum_from: tipo_f}
+
+  Geoidr:
+    description: "Geologia/Idrogeologia puntuale (MS 4.2 §2.2.4)"
+    required: false
+    geometry: [Point]
+    fields:
+      - {name: ID_gi,  type: integer, required: true, unique: true}
+      - {name: Tipo_gi, type: string,  required: true, enum_from: tipo_gi}
+      - {name: Valore, type: float,   required: false}
+      - {name: Valore2, type: float,  required: false}
+
+  Geotec:
+    description: "Unità geologico-tecniche (MS 4.2 §2.2.5)"
+    required: false
+    geometry: [Polygon, MultiPolygon]
+    fields:
+      - {name: ID_geot, type: integer, required: true, unique: true}
+      - {name: Stato,   type: integer, required: false, enum_from: geotec_stato}
+      - {name: Tipo_gt, type: string,  required: false, enum_from: geotec_tipo_gt}
+
+  Ind_ln:
+    description: "Indagini lineari (punti rappresentativi) (MS 4.2 §2.2.6)"
+    required: false
+    geometry: [Point]
+    fields:
+      - {name: ID_SLN, type: string, required: true, max_length: 15}
+
+  Ind_pu:
+    description: "Indagini puntuali (MS 4.2 §2.2.7)"
+    required: false
+    geometry: [Point]
+    fields:
+      - {name: ID_SPU, type: string, required: true, max_length: 15}
+
+  Instab:
+    description: "Instabilità (MS 4.2 §2.2.8)"
+    required: true
+    geometry: [Polygon, MultiPolygon]
+    fields:
+      - {name: ID_i,   type: integer, required: true, unique: true}
+      - {name: Tipo_i, type: string,  required: true,
+         regex: "^(?:300120|300220|301120|301220|301320|301420|301520|302120|302220|302320|302420|302520|303120|303220|303320|303420|303520|304120|304220|304320|304420|304520|305020|305220|305320)\\d{2}$|^(?:3060|3061|3062|3070|3080)$"}
+      - {name: FA,      type: float, required: false}
+      - {name: FV,      type: float, required: false}
+      - {name: Ft,      type: float, required: false}
+      - {name: FH0105,  type: float, required: false}
+      - {name: FH0510,  type: float, required: false}
+      - {name: FH0515,  type: float, required: false}
+      - {name: FPGA,    type: float, required: false}
+      - {name: FA0105,  type: float, required: false}
+      - {name: FA0408,  type: float, required: false}
+      - {name: FA0711,  type: float, required: false}
+      - {name: LIVELLO, type: float, required: false}
+      - {name: CAT,     type: string, required: false, max_length: 2}
+
+  Isosub:
+    description: "Isobate del substrato (MS 4.2 §2.2.9)"
+    required: true
+    geometry: [LineString, MultiLineString]
+    fields:
+      - {name: ID_isosub, type: integer, required: true, unique: true}
+      - {name: Quota,     type: integer, required: true}
+
+  Stab:
+    description: "Stabilità locali (MS 4.2 §2.2.10)"
+    required: true
+    geometry: [Polygon, MultiPolygon]
+    fields:
+      - {name: ID_z,   type: integer, required: true, unique: true}
+      - {name: Tipo_z, type: integer, required: true, enum_from: tipo_z}
+      - {name: FA,      type: float, required: false}
+      - {name: FV,      type: float, required: false}
+      - {name: Ft,      type: float, required: false}
+      - {name: FH0105,  type: float, required: false}
+      - {name: FH0510,  type: float, required: false}
+      - {name: FH0515,  type: float, required: false}
+      - {name: FPGA,    type: float, required: false}
+      - {name: FA0105,  type: float, required: false}
+      - {name: FA0408,  type: float, required: false}
+      - {name: FA0711,  type: float, required: false}
+      - {name: SPETTRI, type: string, required: false}
+      - {name: LIVELLO, type: float, required: false}
+      - {name: CAT,     type: string, required: false, max_length: 2}

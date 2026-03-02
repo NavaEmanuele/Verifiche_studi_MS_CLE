@@ -1,0 +1,37 @@
+# ms_linkmap_l42_generic.yaml
+# Linkmap "generico" per Standard MS 4.2 — INDAGINI
+# Valida corrispondenza ID tra:
+#  - Shapefile puntuali  (Ind_pu.shp) ↔ MDB Sito_puntuale (ID_SPU)
+#  - Shapefile lineari  (Ind_ln.shp) ↔ MDB Sito_lineare  (ID_SLN)
+#
+# CONVENZIONE CARTELLE (per ogni comune):
+#   <dataset_root>\Indagini\Ind_pu.shp
+#   <dataset_root>\Indagini\Ind_ln.shp
+#   <dataset_root>\Indagini\CdI_Tabelle_*.mdb   (il percorso MDB lo passi a parte allo script)
+#
+# Se i nomi dei .shp sono diversi nel tuo archivio, cambia SOLO i valori "shp" qui sotto.
+# I percorsi sono RELATIVI al dataset_root passato a riga di comando.
+
+ms_linkmap:
+  - name: "IND_PU: ID_SPU vs MDB.Sito_puntuale.ID_SPU"
+    shp: "Indagini/Ind_pu.shp"
+    shp_id_field: "ID_SPU"
+    mdb_table: "Sito_puntuale"
+    mdb_id_field: "ID_SPU"
+    normalize:
+      strip: true
+      collapse_spaces: true
+      upper: true
+      # istat_pad6: false   # metti true se vuoi zero-padding dei primi 6 car. (ISTAT)
+
+  - name: "IND_LN: ID_SLN vs MDB.Sito_lineare.ID_SLN"
+    shp: "Indagini/Ind_ln.shp"
+    shp_id_field: "ID_SLN"
+    mdb_table: "Sito_lineare"
+    mdb_id_field: "ID_SLN"
+    normalize:
+      strip: true
+      collapse_spaces: true
+      upper: true
+      # istat_pad6: false
+
